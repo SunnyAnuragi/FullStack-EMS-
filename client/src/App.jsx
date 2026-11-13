@@ -16,6 +16,7 @@ const App = () => {
     <>
       <Toaster />
       <Routes>
+        
         <Route path="/login" element={<LoginLanding />} />
 
         <Route
@@ -57,4 +58,3 @@ const App = () => {
 };
 
 export default App;
- 
