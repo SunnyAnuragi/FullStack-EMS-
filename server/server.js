@@ -1,6 +1,6 @@
 import dns from "dns";
 
-dns.setServers(["8.8.8.8", "1.1.1.1"]); 
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 import express from "express";
 import cors from "cors";
@@ -28,6 +28,7 @@ app.use(multer().none());
 
 // Routes
 app.get("/", (req, res) => res.send("Server is running"));
+
 app.use("/api/auth", authRouter);
 app.use("/api/employees", employeesRouter);
 app.use("/api/profile", profileRouter);
@@ -39,4 +40,7 @@ app.use("/api/dashboard", dashboardRouter);
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
 await connectDB();
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
