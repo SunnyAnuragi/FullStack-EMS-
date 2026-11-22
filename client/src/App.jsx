@@ -12,9 +12,11 @@ import PrintPayslip from "./pages/PrintPayslip";
 import LoginForm from "./components/LoginForm";
 
 const App = () => {
+
   return (
     <>
       <Toaster />
+
       <Routes>
         
         <Route path="/login" element={<LoginLanding />} />
@@ -49,6 +51,7 @@ const App = () => {
           <Route path="/payslips" element={<Payslips />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
+        
         <Route path="/print/payslips/:id" element={<PrintPayslip />} />
 
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
